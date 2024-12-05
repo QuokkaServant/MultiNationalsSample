@@ -1,0 +1,19 @@
+﻿<Application x:Class="MultiNationalsSample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MultiNationalsSample" 
+             xmlns:converter="clr-namespace:MultiNationalsSample.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MultiNationalsSample;component/Languages/ko.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converter:CountryDescriptionConverter x:Key="CountryDescriptionConverter" />
+            <converter:CountryCurrencySymbolConverter x:Key="CountryCurrencySymbolConverter" />
+            <converter:PlaceBeforeCurrencySymbolConverter x:Key="PlaceBeforeCurrencySymbolConverter" />
+            <converter:CurrencyFormatConverter x:Key="CurrencyFormatConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
